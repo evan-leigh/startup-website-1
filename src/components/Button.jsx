@@ -11,10 +11,17 @@ const styles = [
 
 const sizes = ['large', 'medium', 'small']
 
-export const Button = ({rightIcon, text, type, onClick, style, size}) => {
+export const Button = ({
+	iconRight,
+	text,
+	type,
+	onClick,
+	buttonStyle,
+	buttonSize,
+}) => {
 	// Gets the prop value then adds the respective class
-	const setButtonStyle = styles.includes(style) ? style : styles[0]
-	const setButtonSize = sizes.includes(size) ? size : sizes[1]
+	const setButtonStyle = styles.includes(buttonStyle) ? buttonStyle : styles[0]
+	const setButtonSize = sizes.includes(buttonSize) ? buttonSize : sizes[1]
 
 	return (
 		<button
@@ -24,7 +31,7 @@ export const Button = ({rightIcon, text, type, onClick, style, size}) => {
 			className={`button ${setButtonStyle} ${setButtonSize}`}
 		>
 			{text}
-			{rightIcon}
+			{iconRight}
 		</button>
 	)
 }

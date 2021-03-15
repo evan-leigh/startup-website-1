@@ -16,9 +16,9 @@ const Index = () => (
 					</p>
 					<Button
 						text='Get Started'
-						size='medium'
-						style='primary'
-						rightIcon={<ArrowEast />}
+						buttonSize='medium'
+						buttonStyle='primary'
+						iconRight={<ArrowEast />}
 					/>
 				</div>
 				<img src={CoverImage} alt='' />
@@ -40,10 +40,17 @@ const Index = () => (
 					lacinia sit vel augue.
 				</p>
 				<div className='links'>
-					<Button text='Get Started' size='small' style='primary' />
+					<Button
+						text='Get Started'
+						buttonSize='medium'
+						buttonStyle='primary'
+					/>
 					<Link>Get Started</Link>
 				</div>
 			</div>
+		</div>
+		<div className='testemonials'>
+			<div></div>
 		</div>
 	</Main>
 )
