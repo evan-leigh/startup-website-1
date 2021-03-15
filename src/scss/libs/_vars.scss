@@ -1,0 +1,82 @@
+
+
+@import 'functions';
+
+$viewport-width: 						1440px;
+$default-font-size: 					16px;
+
+$size: (
+element-margin: 						em(15px),
+element-height:							em(50px),
+element-width:							em(150px),
+);
+
+$font: (
+
+// Font Faces
+family-body: 							("Manrope", sans-serif),
+family-heading: 						("Manrope",	sans-serif),
+family-fallback: 						("Helvetica", Arial, sans-serif),
+
+// Weights
+weight-regular: 						400,
+weight-medium: 							500,
+weight-semibold: 						600,
+weight-bold: 							700,
+weight-extrabold: 						800,
+weight-black:	 						900,
+
+// Letter Spacings
+kerning-heading: 						em(0.32px),
+kerning-body-large: 					em(.16px),
+kerning-body-medium: 					em(-0.08px),
+kerning-label:							em(1.5px),
+
+// Headings
+header-large: 							clamp( min(50px), font-size(56px), max(67px)),
+header-medium: 							clamp( min(38px), font-size(44px), max(50px)),
+header-small: 							clamp( min(16px), font-size(18px), max(21px)),
+
+// Body Texts
+body-large: 							clamp( min(18px), font-size(20px), max(22px)),
+body-medium: 							clamp( min(16px), font-size(17px), max(18px)),
+body-small: 							clamp( min(12px), font-size(13px), max(14px)),
+
+// Labels
+label-large: 							clamp( min(15px), font-size(17px), max(18px)),
+label-medium: 							clamp( min(16px), font-size(17px), max(18px)),
+label-small: 							clamp( min(12px), font-size(13px), max(14px)),
+);
+
+$palette: (
+
+// Colors
+primary: 								hsl(246, 100%, 50%),
+secondary: 								hsl(197, 92%, 53%),
+
+// Buttons
+button-default:							hsl(0, 0%, 20%),
+button-default-text: 					hsl(0, 0%, 100%),
+
+button-primary:							hsl(223, 100%, 50%), 
+button-primary-text:					hsl(0, 0%, 100%), 
+
+button-secondary: 						hsl(197, 92%, 53%),	
+button-secondary-text: 					hsl(0, 0%, 100%),				
+
+// Gray Scale
+gray-900: 								hsl(0, 0%, 15%),
+gray-800: 								hsl(0, 0%, 30%),
+gray-700: 								hsl(0, 0%, 45%),
+gray-600: 								hsl(0, 0%, 60%),
+
+background: 							hsl(0, 0%, 100%),	
+);
+
+$transition: (
+
+default:								all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+)
+
+

@@ -1,0 +1,5 @@
+export {default as CoverImage} from './CoverImage.png'
+export {default as CoverImage2} from './CoverImage-2.png'
+export {ReactComponent as ArrowEast} from './icons/arrow-east.svg'
+export {ReactComponent as Logo} from './icons/logo.svg'
+export {ReactComponent as Menu} from './icons/menu.svg'

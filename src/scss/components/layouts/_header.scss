@@ -1,0 +1,99 @@
+header {
+	padding-left: 8.5%;
+	border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+	display: flex;
+	position: absolute;
+	width: 100vw;
+	transform: translateX(-50%);
+	left: 50%;
+	top: 0;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	transition: _transition(default);
+
+	a {
+		display: flex;
+		height: 100px;
+		align-items: center;
+	}
+
+	.logo {
+		margin-right: _size(element-width) * 0.085;
+		display: flex;
+		svg path {
+			fill: _palette(primary);
+		}
+	}
+
+	&:hover {
+		transition: _transition(default);
+		color: _palette(primary);
+	}
+}
+
+.nav-menu {
+	white-space: nowrap;
+	margin-left: auto;
+	width: 50%;
+	padding-left: 6.5%;
+
+	nav {
+		display: flex;
+		align-items: center;
+		a {
+			position: relative;
+			width: _size(element-width) * 0.95;
+			transition: _transition(default);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			vertical-align: middle;
+			text-align: center;
+			height: 100px;
+
+			&::after {
+				transform: translateY(50px);
+				right: 0;
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: em(3px);
+				background-color: _palette(primary);
+				transition: _transition(default);
+				opacity: 0;
+			}
+
+			&:hover {
+				color: _palette(primary);
+				transition: _transition(default);
+
+				&::after {
+					left: 0;
+					opacity: 1;
+				}
+			}
+		}
+		.nav-link-active {
+			color: _palette(primary);
+
+			&::after {
+				transition: none;
+				opacity: 1;
+			}
+		}
+	}
+
+	.menu {
+		cursor: pointer;
+		margin: 0 auto;
+		transition: transition(default);
+		&:hover path {
+			fill: _palette(primary);
+			transition: transition(default);
+		}
+	}
+}

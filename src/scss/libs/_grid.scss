@@ -1,0 +1,15 @@
+// For setting behavior of grid items
+
+// /// @param {col_start} $col_start
+// /// @param {col_end} $col_end
+//     @function grid($col_start, $col_end) {
+// 	$width: columns($col_start * $col_end);
+// 	@return $width;
+// }
+
+@function col($start, $end) {
+	$width: ($start * $end);
+	@return $width * 80px;
+}
+
+$grid: (0-1: grid(1, 2));

@@ -1,0 +1,151 @@
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button,
+.button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: _size(element-height) * 1;
+  font-family: _font(family-body);
+  font-weight: _font(weight-semibold);
+  background-color: _palette(primary);
+  color: _palette(button-primary-text);
+  transition: _transition(default);
+
+  svg {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: _size(element-width) * 0.05;
+    transition: _transition(default);
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
+    transition: _transition(default);
+  }
+
+  &:hover {
+    transition: _transition(default);
+  }
+  &:active {
+    outline: none;
+    transition: _transition(default);
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background-color: _palette(primary);
+  }
+
+  &.primary-outline {
+    background: none;
+    border: 2px solid _palette(primary);
+    color: _palette(primary);
+
+    path {
+      fill: _palette(primary);
+      transition: _transition(default);
+    }
+
+    &:hover {
+      background: _palette(primary);
+      color: _palette(button-primary-text);
+      & path {
+        fill: _palette(button-primary-text);
+        transition: _transition(default);
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: _palette(secondary);
+  }
+
+  &.secondary-outline {
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid _palette(secondary);
+    color: _palette(secondary);
+
+    path {
+      fill: _palette(secondary);
+      transition: _transition(default);
+    }
+
+    &:hover {
+      background: _palette(secondary);
+      color: _palette(button-primary-text);
+      & path {
+        fill: _palette(button-secondary-text);
+        transition: _transition(default);
+      }
+    }
+  }
+
+  &.default {
+    background-color: _palette(button-default);
+    color: _palette(button-default-text);
+  }
+
+  &.default-outline {
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid _palette(button-default);
+    color: _palette(button-default);
+
+    path {
+      fill: _palette(button-default);
+      transition: _transition(default);
+    }
+
+    &:hover {
+      background: _palette(button-default);
+      color: _palette(button-default-text);
+      & path {
+        fill: _palette(button-default-text);
+        transition: _transition(default);
+      }
+    }
+  }
+
+  &.large {
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    width: _size(element-width) * 1.5;
+    padding: (_size(element-margin) * 2.25) (_size(element-margin) * 1.5);
+    font-size: _font(label-large);
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &.medium {
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: _size(element-width) * 1.25;
+    padding: (_size(element-margin) * 1.85) (_size(element-margin) * 1.5);
+    font-size: _font(label-medium);
+    font-weight: _font(weight-medium);
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &.small {
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: _size(element-width) * 1.15;
+    padding: _size(element-margin) * 1.2;
+    font-size: _font(label-small);
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
