@@ -35,9 +35,10 @@ i {
 }
 
 p {
+	font-size: _font(body-medium);
 	margin: 0 0 _size(element-margin) * 1.75;
 	letter-spacing: _font(kerning-body-large);
-	font-weight: _font(weight-medium);
+	font-weight: _font(weight-regular);
 }
 
 h1,
@@ -50,7 +51,6 @@ h6 {
 	font-weight: _font(weight-bold);
 	letter-spacing: _font(kerning-heading);
 	color: _palette(gray-900);
-	line-height: 1.25;
 
 	a {
 		color: inherit;
@@ -59,29 +59,33 @@ h6 {
 
 h1 {
 	font-size: _font(header-large);
-	font-weight: _font(weight-extrabold);
-	line-height: 1.15;
+	font-weight: _font(weight-bold);
+	line-height: 1.35;
+	margin-bottom: _size(element-margin) * 0.25;
 }
 
 h2 {
 	font-size: _font(header-medium);
+	font-weight: _font(weight-semibold);
+	line-height: 1.55;
+	margin-bottom: _size(element-margin) * 0.5;
 }
 
 h3 {
 	font-size: _font(header-small);
 	font-weight: _font(weight-semibold);
+	line-height: 1.65;
+	margin-bottom: _size(element-margin) * 0.8;
 }
 
 .body-large {
 	font-size: _font(body-large);
 	letter-spacing: _font(kerning-body-large);
-	font-weight: _font(weight-medium);
 }
 
 .body-medium {
 	font-size: _font(body-medium);
 	letter-spacing: _font(kerning-body-medium);
-	font-weight: _font(weight-semibold);
 }
 
 .body-small {
@@ -95,7 +99,7 @@ h3 {
 
 .label-medium {
 	font-size: _font(label-medium);
-	font-weight: _font(weight-semibold);
+	font-weight: _font(weight-medium);
 }
 
 .label-small {

@@ -28,8 +28,7 @@ export const Button = ({
 			onClick={onClick}
 			type={type}
 			// Template literal for setting button class
-			className={`button ${setButtonStyle} ${setButtonSize}`}
-		>
+			className={`button mobile-full-width ${setButtonStyle} ${setButtonSize}`}>
 			{text}
 			{iconRight}
 		</button>

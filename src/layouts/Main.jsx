@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
 import Header from './Header'
+import Footer from './Footer'
 
 const Main = (props) => (
-    <div id="main">
-        <Header brandName="Brand Identity" itemOne="About" itemTwo="Services" itemThree="Case Studies" itemFour="FAQ"/>
-        {props.children}
-    </div>
-);
+	<main id='main'>
+		<Header links='home' />
+		{props.children}
+		<Footer />
+	</main>
+)
 
-export default Main;
+export default Main

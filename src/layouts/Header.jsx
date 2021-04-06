@@ -1,50 +1,26 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import {Logo, Menu} from '../assets/index'
 
-const Header = (props) => (
+const NavItem = (props) => (
+	<NavLink activeClassName='nav-link-active' to={`/${props.link}`}>
+		{props.link}
+		{props.children}
+	</NavLink>
+)
+
+const Header = () => (
 	<header>
-		<div className='brand'>
-			<Link to='/'>
-				<span className='logo'>
-					<Logo />
-				</span>
-				<span className='label-medium'>{props.brandName}</span>
-			</Link>
-		</div>
-		<div className='nav-menu'>
-			<nav>
-				<NavLink
-					activeClassName='nav-link-active'
-					className='label-medium'
-					to={`/${props.itemOne}`}
-				>
-					{props.itemOne}
-				</NavLink>
-				<NavLink
-					activeClassName='nav-link-active'
-					className='label-medium'
-					to={`/${props.itemTwo}`}
-				>
-					{props.itemTwo}
-				</NavLink>
-				<NavLink
-					activeClassName='nav-link-active'
-					className='label-medium'
-					to={`/${props.itemThree}`}
-				>
-					{props.itemThree}
-				</NavLink>
-				<NavLink
-					activeClassName='nav-link-active'
-					className='label-medium'
-					to={`/${props.itemFour}`}
-				>
-					{props.itemFour}
-				</NavLink>
-				<Menu className='menu' />
-			</nav>
-		</div>
+		<NavItem link=''>
+			<Logo />
+			<span>Brand Name</span>
+		</NavItem>
+		<nav>
+			<NavItem link='home' />
+			<NavItem link='about' />
+			<NavItem link='contact' />
+		</nav>
+		<Menu className='menu' />
 	</header>
 )
 

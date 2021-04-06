@@ -1,35 +1,35 @@
 /// Gets a font value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-	@function _font($keys...) {
+@function _font($keys...) {
 	@return val($font, $keys...);
 }
 
 /// Gets a palette value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-	@function _palette($keys...) {
+@function _palette($keys...) {
 	@return val($palette, $keys...);
 }
 
 /// Gets a size value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-	@function _size($keys...) {
+@function _size($keys...) {
 	@return val($size, $keys...);
 }
 
 /// Gets a grid value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-	@function _grid($keys...) {
+@function _grid($keys...) {
 	@return val($grid, $keys...);
 }
 
 /// Gets a transition value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-	@function _transition($keys...) {
+@function _transition($keys...) {
 	@return val($transition, $keys...);
 }
 
@@ -57,6 +57,6 @@
 	@return $size / $context * 100vw;
 }
 
-@function font-size($size, $context: $viewport-width) {
+@function initial($size, $context: $viewport-width) {
 	@return vwCalc($size);
 }
