@@ -2,20 +2,21 @@
 
 // Libraries
 @import "libs/vars";
+@import "libs/grid";
 @import "libs/skel";
 @import "libs/functions";
-@import "libs/grid";
 
 // Pages
-@import "pages/index";
+@import "pages/home";
 @import "pages/about";
 
 // Components
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./components/buttons";
-@import "./components/scroll-arrow";
+@import "./components/divider";
 @import "./components/testemonial";
+@import "./components/marquee";
 
 // Base
 @import "base/typography";

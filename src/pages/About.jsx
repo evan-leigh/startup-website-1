@@ -3,11 +3,11 @@ import Main from '../layouts/Main'
 
 const About = () => (
 	<Main>
-		<div id='about'>
+		<section id='about'>
 			<div className='hero'>
 				<h1>About</h1>
 			</div>
-		</div>
+		</section>
 	</Main>
 )
 

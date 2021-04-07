@@ -38,7 +38,7 @@ p {
 	font-size: _font(body-medium);
 	margin: 0 0 _size(element-margin) * 1.75;
 	letter-spacing: _font(kerning-body-large);
-	font-weight: _font(weight-regular);
+	font-weight: _font(weight-medium);
 }
 
 h1,
@@ -94,7 +94,7 @@ h3 {
 
 .label-large {
 	font-size: _font(label-large);
-	font-weight: _font(weight-semibold);
+	font-weight: _font(weight-medium);
 }
 
 .label-medium {

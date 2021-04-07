@@ -1,128 +1,141 @@
-
-
 @import 'functions';
 
-$viewport-width: 						1440px;
-$default-font-size: 					16px;
+$viewport-width: 1440px;
+$default-font-size: 16px;
 
 $breakpoints: (
-    desktop:                            em(1024px),
-    tablet:                             em(768px),
-    mobile:                             em(320px),
-
-    );
-
-$size: (
-element-margin: 						em(15px),
-element-height:							em(50px),
-element-width:							em(150px),
-
+	desktop: em(1024px),
+	tablet: em(768px),
+	mobile: em(320px),
 );
 
+$size: (
+	element-margin: em(15px),
+	element-height: em(50px),
+	element-width: em(150px),
+);
 
 // Initial Font Sizes
 
-$header-large:                              48px;
-$header-medium:                             42px;
-$header-small:                              26px;
+$header-large: 42px;
+$header-medium: 38px;
+$header-small: 28px;
 
-$body-large:                                20px;
-$body-medium:                               15px;
-$body-small:                                13px;
+$body-large: 20px;
+$body-medium: 17px;
+$body-small: 14px;
 
-$label-large:                               17px;
-$label-medium:                              15px;
-$label-small:                               13px;
+$label-large: 16px;
+$label-medium: 15px;
+$label-small: 13px;
 
-$min:                                       0.9;
-$max:                                       1.2;
-
-
-// header-medium: 							clamp( min(28px), mid(44px), max(38px)),
-// header-small: 							clamp( min(22px), mid(36px), max(38px)),
-
-// // Body Texts
-// body-large: 							    clamp( min(18px), mid(20px), max(22px)),
-// body-medium: 							clamp( min(16px), mid(17px), max(18px)),
-// body-small: 							    clamp( min(12px), mid(13px), max(14px)),
-
-// // Labels
-// label-large: 							clamp( min(15px), mid(17px), max(18px)),
-// label-medium: 							clamp( min(16px), mid(17px), max(18px)),
-// label-small: 							clamp( min(12px), mid(13px), max(14px)),
-
+$min: 0.85;
+$max: 1.4;
 
 $font: (
-
-// Font Faces
-family-body: 							("Manrope", sans-serif),
-family-heading: 						("Manrope",	sans-serif),
-family-fallback: 						("Helvetica", Arial, sans-serif),
-
-// Weights
-weight-regular: 						400,
-weight-medium: 							500,
-weight-semibold: 						600,
-weight-bold: 							700,
-weight-extrabold: 						800,
-weight-black:	 						900,
-
-// Letter Spacings
-kerning-heading: 						em(0.15px),
-kerning-body-large: 					em(.16px),
-kerning-body-medium: 					em(-0.08px),
-kerning-label:							em(1.5px),
-
-
-// Scales font size depending on viewport size
-
-// Headings
-header-large: 							clamp( min($header-large * ($min * 1.2)), initial($header-large), max($header-large * $max)),
-header-medium: 							clamp( min($header-medium * $min), initial($header-medium), max($header-medium * $max)),
-header-small: 							clamp( min($header-small * $min), initial($header-small), max($header-small * $max)),
-
-// Body Texts
-body-large: 							clamp( min($body-large * $min), initial($body-large), max($body-large * $max)),
-body-medium: 							clamp( min($body-medium * ($min * 1.175)), initial($body-medium), max($body-medium * $max)),
-body-small: 							clamp( min($body-small * $min), initial($body-small), max($body-small * $max)),
-
-// Labels
-label-large: 							clamp( min($label-large * $min), initial($label-large), max($label-large * $max)),
-label-medium: 							clamp(min($label-medium * $min), initial($label-medium), max($label-medium * $max)),
-label-small: 							clamp( min($label-small * $min), initial($label-small), max($label-small * $max)),
-
+	// Font Faces
+	family-body: ('Manrope', sans-serif),
+	family-heading: ('Manrope', sans-serif),
+	family-fallback: ('Helvetica', Arial, sans-serif),
+	// Weights
+	weight-regular: 400,
+	weight-medium: 500,
+	weight-semibold: 600,
+	weight-bold: 700,
+	weight-extrabold: 800,
+	weight-black: 900,
+	// Letter Spacings
+	kerning-heading: em(0.15px),
+	kerning-body-large: em(0.16px),
+	kerning-body-medium: em(-0.08px),
+	kerning-label: em(1.5px),
+	// Scales font size depending on viewport size
+	// Headings
+	header-large:
+		clamp(
+			min($header-large * $min),
+			initial($header-large),
+			max($header-large * $max)
+		),
+	header-medium:
+		clamp(
+			min($header-medium * $min),
+			initial($header-medium),
+			max($header-medium * $max)
+		),
+	header-small:
+		clamp(
+			min($header-small * $min),
+			initial($header-small),
+			max($header-small * $max)
+		),
+	// Body Texts
+	body-large:
+		clamp(
+			min($body-large * $min),
+			initial($body-large),
+			max($body-large * $max)
+		),
+	body-medium:
+		clamp(
+			min($body-medium * $min),
+			initial($body-medium),
+			max($body-medium * ($max * 0.8))
+		),
+	body-small:
+		clamp(
+			min($body-small * $min),
+			initial($body-small),
+			max($body-small * $max)
+		),
+	// Labels
+	label-large:
+		clamp(
+			min($label-large * $min),
+			initial($label-large),
+			max($label-large * $max)
+		),
+	label-medium:
+		clamp(
+			min($label-medium * $min),
+			initial($label-medium),
+			max($label-medium * $max)
+		),
+	label-small:
+		clamp(
+			min($label-small * $min),
+			initial($label-small),
+			max($label-small * $max)
+		)
 );
 
 $palette: (
-
-// Colors
-primary: 								hsl(221, 100%, 55%),
-secondary: 								hsl(197, 92%, 53%),
-tertiary: 								hsl(175, 76%, 69%),
-
-// Buttons
-button-default:							hsl(0, 0%, 20%),
-button-default-text: 					hsl(0, 0%, 100%),
-
-button-primary:							hsl(221, 100%, 55%), 
-button-primary-text:					hsl(0, 0%, 100%), 
-
-button-secondary: 						hsl(0, 0%, 100%),	
-button-secondary-text: 					hsl(221, 100%, 55%),			
-
-// Gray Scale
-gray-900: 								rgb(38, 38, 38),
-gray-800: 								hsl(0, 0%, 30%),
-gray-700: 								hsl(0, 0%, 45%),
-gray-600: 								hsl(0, 0%, 60%),
-gray-500: 								hsl(0, 0%, 75%),
-gray-400: 								hsl(0, 0%, 90%),
-background: 							hsl(0, 0%, 100%),	
+	// Colors
+	primary: hsl(221, 100%, 55%),
+	secondary: hsl(197, 92%, 53%),
+	tertiary: hsl(175, 76%, 69%),
+	// Buttons
+	button-default: hsl(0, 0%, 20%),
+	button-default-text: hsl(0, 0%, 100%),
+	button-primary: hsl(221, 100%, 55%),
+	button-primary-text: hsl(0, 0%, 100%),
+	button-secondary: hsl(0, 0%, 100%),
+	button-secondary-text: hsl(221, 100%, 55%),
+	// Gray Scale
+	gray-900: hsl(0, 0%, 15%),
+	gray-800: hsl(0, 0%, 30%),
+	gray-700: hsl(0, 0%, 45%),
+	gray-600: hsl(0, 0%, 60%),
+	gray-500: hsl(0, 0%, 75%),
+	gray-400: hsl(0, 0%, 90%),
+	background: hsl(0, 0%, 100%)
 );
 
 $transition: (
+	default: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
+);
 
-default:								all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1)
-)
-
-
+$box-shadow: (
+	default: -10px 10px 25px 0px rgba(0, 0, 0, 0.05),
+	top: 0px -4px 3px rgba(50, 50, 50, 0.452),
+);

@@ -1,36 +1,55 @@
 import React from 'react'
 import Main from '../layouts/Main'
-import {Button, Testemonial} from '../components/index'
-import {CoverImage1, CoverImage2, CoverImage3, ArrowEast} from '../assets/index'
-import {Link} from 'react-router-dom'
-import Marquee from 'react-fast-marquee'
+import {Button, MarqueeContainer} from '../components/index'
+import {
+	CoverImage1,
+	CoverImage1Webp,
+	// CoverImage2,
+	// CoverImage3,
+	ArrowEast,
+	ArrowDown,
+	Divider,
+} from '../assets/index'
+// import {Link} from 'react-router-dom'
 
 function Index() {
 	return (
 		<Main>
-			<section id='index'>
-				<aside data-aos='fade' style={{maxWidth: '450px'}}>
-					<h1>Dedicated to raising the bar</h1>
+			<section id='home'>
+				<aside style={{flexBasis: '440px'}}>
+					<h1 style={{maxWidth: '8em'}}>Dedicated to raising the bar</h1>
 					<p className='body-medium'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
 						elit tincidunt id tempus ut nunc duis non sit.
 					</p>
 					<Button
+						to='about'
 						text='Get Started'
 						buttonSize='medium'
 						buttonStyle='primary'
 						iconRight={<ArrowEast />}
 					/>
 				</aside>
-				<img src={CoverImage1} alt='' />
-				{/* <div className='divider'>
-					<ScrollArrow className='scroll-arrow' />
-				</div> */}
+				<picture>
+					<source type='image/webp' srcset={CoverImage1Webp} />
+					<source type='image/png' srcset={CoverImage1} />
+					<img src={CoverImage1} alt=''></img>
+				</picture>
 			</section>
+			<div className='divider'>
+				<div className='divider-container'>
+					<Divider className='divider-bar' />
+					<ArrowDown className='scroll-arrow' />
+				</div>
+			</div>
 			<section className='about-section'>
-				<img src={CoverImage2} alt='' />
-				<aside data-aos='fade'>
-					<h2>Build a brand for your business.</h2>
+				<picture>
+					<source type='image/webp' srcset={CoverImage1Webp} />
+					<source type='image/png' srcset={CoverImage1} />
+					<img src={CoverImage1} alt='' />
+				</picture>
+				<aside style={{flexBasis: '27em'}}>
+					<h2 style={{maxWidth: '8em'}}>Build a brand for your business.</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
 						aliquet magna leo semper turpis vivamus augue ac dui. Amet
@@ -42,19 +61,24 @@ function Index() {
 						nibh id placerat ut adipiscing. Vulputate egestas sapien varius nibh
 						a lacinia sit vel augue.
 					</p>
-					<div className='links'>
+					{/* <div className='links'>
 						<Button
 							text='Get Started'
 							buttonSize='medium'
 							buttonStyle='primary'
 						/>
-						<Link to='#'>Get Started</Link>
-					</div>
+						<Link to='#'>
+							<span>Get Started</span>
+						</Link>
+					</div> */}
 				</aside>
 			</section>
 			<section className='testemonials'>
-				<aside data-aos='fade'>
-					<h3>Heres what they're saying</h3>
+				<aside>
+					<h1>Helping over 493 brands grow their profit.</h1>
+				</aside>
+				<aside>
+					<h3>Heres what they're saying...</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Pellentesque aliquam non mattis est, mauris sit risus pellentesque
@@ -62,43 +86,13 @@ function Index() {
 						porta venenatis.
 					</p>
 				</aside>
-				<aside data-aos='fade'>
-					<h1>Helping over 493 brands grow their profit.</h1>
-				</aside>
-				<div style={{overflowX: 'hidden', margin: '0 -2vw', padding: '5vh 0'}}>
-					<Marquee gradientWidth='100'>
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-					</Marquee>
-				</div>
-				<div style={{overflowX: 'hidden', padding: '5vh 0'}}>
-					<Marquee gradientWidth='100' direction='right'>
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-						<Testemonial />
-					</Marquee>
-				</div>
+				<MarqueeContainer />
 			</section>
 
 			<section>
 				<aside data-aos='fade'>
-					<h2>
-						We have a team of dedicated professionals ready to provide value
-					</h2>
-					<blockquote style={{flexBasis: '900px'}}>
+					<h2>We have a team of dedicated professionals</h2>
+					<blockquote>
 						<ul className='block-quote'>
 							<li>
 								<p>
@@ -124,7 +118,11 @@ function Index() {
 						</ul>
 					</blockquote>
 				</aside>
-				<img src={CoverImage3} alt='' />
+				<picture>
+					<source type='image/webp' srcset={CoverImage1Webp} />
+					<source type='image/png' srcset={CoverImage1} />
+					<img src={CoverImage1} alt='' />
+				</picture>
 			</section>
 			<section>
 				<div className='banner-cta'>

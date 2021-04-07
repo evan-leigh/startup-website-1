@@ -3,7 +3,9 @@ import Main from '../layouts/Main'
 
 const NotFound = () => (
 	<Main>
-		<h1>Not Found</h1>
+		<section>
+			<h1>Not Found</h1>
+		</section>
 	</Main>
 )
 

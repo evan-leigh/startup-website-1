@@ -4,17 +4,29 @@ input[type='button'],
 button,
 .button {
 	position: relative;
-	border: none;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: _size(element-height) * 1;
+	border: none; // border: none;
+	height: auto;
 	font-family: _font(family-body);
 	font-weight: _font(weight-semibold);
-	background-color: _palette(primary);
 	color: _palette(button-primary-text);
 	transition: _transition(default);
+	margin: 0;
+	padding: 0;
+	@media (max-width: 411px) {
+		width: 100% !important;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 1.5em 1em;
+		span {
+			width: 100%;
+			display: flex;
+		}
+	}
 
 	svg {
 		display: flex;
@@ -25,7 +37,7 @@ button,
 	}
 
 	&:hover svg {
-		transform: translateX(3px);
+		transform: translateX(8px);
 		transition: _transition(default);
 	}
 
@@ -42,11 +54,14 @@ button,
 
 	&.primary {
 		background-color: _palette(primary);
+		a:hover {
+			color: _palette(background);
+		}
 	}
 
 	&.primary-outline {
 		background: none;
-		border: 2px solid _palette(primary);
+		border: none; // border: 2px solid _palette(primary);
 		color: _palette(primary);
 
 		path {
@@ -76,7 +91,7 @@ button,
 
 	&.secondary-outline {
 		background: rgba(0, 0, 0, 0);
-		border: 2px solid _palette(secondary);
+		border: none; // border: 2px solid _palette(secondary);
 		color: _palette(button-secondary);
 
 		path {
@@ -101,7 +116,7 @@ button,
 
 	&.default-outline {
 		background: rgba(0, 0, 0, 0);
-		border: 2px solid _palette(button-default);
+		border: none; // border: 2px solid _palette(button-default);
 		color: _palette(button-default);
 
 		path {
@@ -120,10 +135,10 @@ button,
 	}
 
 	&.large {
-		border-top-right-radius: 35px;
-		border-bottom-left-radius: 35px;
+		border: none; // border-top-right-radius: 35px;
+		border: none; // border-bottom-left-radius: 35px;
 		width: _size(element-width) * 1.5;
-		padding: (_size(element-margin) * 2.25) (_size(element-margin) * 1.5);
+		// padding: (_size(element-margin) * 2.25) (_size(element-margin) * 1.5);
 		font-size: _font(label-large);
 
 		svg {
@@ -133,10 +148,10 @@ button,
 	}
 
 	&.medium {
-		border-top-left-radius: 25px;
-		border-bottom-right-radius: 25px;
+		// border: none; // border-top-left-radius: 25px;
+		// border: none; // border-bottom-right-radius: 25px;
 		width: _size(element-width) * 1.25;
-		padding: (_size(element-margin) * 2.2) (_size(element-margin) * 1.65);
+		// padding: (_size(element-margin) * 2.2) (_size(element-margin) * 1.65);
 		font-size: _font(label-medium);
 		font-weight: _font(weight-medium);
 		svg {
@@ -146,10 +161,10 @@ button,
 	}
 
 	&.small {
-		border-top-left-radius: 15px;
-		border-bottom-right-radius: 15px;
+		// border: none; // border-top-left-radius: 15px;
+		// border: none; // border-bottom-right-radius: 15px;
 		width: _size(element-width) * 1.15;
-		padding: _size(element-margin) * 1.2;
+		// padding: _size(element-margin) * 1.2;
 		font-size: _font(label-small);
 		svg {
 			width: 15px;

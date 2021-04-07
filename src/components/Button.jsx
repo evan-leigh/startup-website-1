@@ -18,8 +18,8 @@ export const Button = ({
 	onClick,
 	buttonStyle,
 	buttonSize,
+	to,
 }) => {
-	// Gets the prop value then adds the respective class
 	const setButtonStyle = styles.includes(buttonStyle) ? buttonStyle : styles[0]
 	const setButtonSize = sizes.includes(buttonSize) ? buttonSize : sizes[1]
 
@@ -27,10 +27,13 @@ export const Button = ({
 		<button
 			onClick={onClick}
 			type={type}
-			// Template literal for setting button class
 			className={`button mobile-full-width ${setButtonStyle} ${setButtonSize}`}>
-			{text}
-			{iconRight}
+			<a href={to}>
+				<span>
+					{text}
+					{iconRight}
+				</span>
+			</a>
 		</button>
 	)
 }

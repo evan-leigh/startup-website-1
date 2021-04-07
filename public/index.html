@@ -3,30 +3,46 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-<script>
-
-</script>
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="" content="" />
-  <title>Apexi</title>
+  <title>Context</title>
 </head>
 
-<body data-aos='fade'>
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-  <!-- <script>
-    AOS.init();
-  </script> -->
+  <script>
+
+
+  </script>
 </body>
+
+
+<!-- For overriding react-fast-marquee's "!important" styles -->
 
 <style>
   .marquee-container {
     overflow-x: visible !important;
+    /* cursor: ew-resize !important; */
+  }
+
+  /* 
+  .marquee-container:hover .marquee {
+    animation-play-state: paused !important;
+    overflow-x: visible;
+
+  }
+
+  .marquee::-webkit-scrollbar {
+    display: none;
+  }
+*/
+  .marquee {
+    pointer-events: none;
+    user-select: none;
   }
 </style>
 

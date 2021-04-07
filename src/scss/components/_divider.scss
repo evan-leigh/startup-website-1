@@ -1,0 +1,29 @@
+.divider {
+	width: 100vw;
+	height: 80px;
+	max-width: 2651px;
+	transform: translateY(-0px);
+
+	.divider-container {
+		position: relative;
+		height: 80px;
+		z-index: 2;
+		.scroll-arrow {
+			position: absolute;
+			transform: translate(-50%, 50%);
+			left: 50%;
+			z-index: 100;
+			// @media (max-width: 948px) {
+			// 	display: none;
+			// }
+		}
+		.divider-bar {
+			position: absolute;
+			filter: drop-shadow(0px -4px 5px rgba(0, 0, 0, 0.05));
+			overflow: hidden;
+			height: 80px;
+			left: 50%;
+			transform: translateX(-50%) scale(1.8);
+		}
+	}
+}

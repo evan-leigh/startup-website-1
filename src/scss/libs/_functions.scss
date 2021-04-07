@@ -33,6 +33,13 @@
 	@return val($transition, $keys...);
 }
 
+/// Gets a transition value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _box-shadow($keys...) {
+	@return val($box-shadow, $keys...);
+}
+
 // Converts px to em
 
 @function emCalc($size, $context: $default-font-size) {

@@ -3,7 +3,7 @@ import React from 'react'
 const Testemonial = (props) => {
 	return (
 		<div
-			className='testemonial body-medium border-rounded-rtl'
+			className='testemonial body-medium'
 			style={{width: '500px', minWidth: '500px'}}>
 			<div>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus

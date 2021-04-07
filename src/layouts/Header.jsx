@@ -1,24 +1,27 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import {Logo, Menu} from '../assets/index'
 
 const NavItem = (props) => (
-	<NavLink activeClassName='nav-link-active' to={`/${props.link}`}>
-		{props.link}
+	<NavLink
+		className='label-large'
+		activeClassName='nav-link-active'
+		to={`/${props.link}`}>
+		<span>{props.link}</span>
 		{props.children}
 	</NavLink>
 )
 
 const Header = () => (
 	<header>
-		<NavItem link=''>
+		<Link to=''>
 			<Logo />
-			<span>Brand Name</span>
-		</NavItem>
+			<span>Context</span>
+		</Link>
 		<nav>
-			<NavItem link='home' />
+			<NavItem link='case studies' />
 			<NavItem link='about' />
-			<NavItem link='contact' />
+			<NavItem link='services' />
 		</nav>
 		<Menu className='menu' />
 	</header>

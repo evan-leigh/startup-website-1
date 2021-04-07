@@ -7,7 +7,7 @@ const {PUBLIC_URL} = process.env
 
 const About = lazy(() => import('./pages/About'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies'))
-const Index = lazy(() => import('./pages/Index'))
+const Home = lazy(() => import('./pages/Home'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 const Services = lazy(() => import('./pages/Services'))
 
@@ -15,7 +15,7 @@ const App = () => (
 	<BrowserRouter basename={PUBLIC_URL}>
 		<Suspense fallback={<Main />}>
 			<Switch>
-				<Route exact path='/' component={Index} />
+				<Route exact path='/' component={Home} />
 				<Route path='/about' component={About} />
 				<Route path='/case studies' component={CaseStudies} />
 				<Route path='/services' component={Services} />
