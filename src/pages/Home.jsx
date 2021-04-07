@@ -85,7 +85,7 @@ function Index() {
 						porta venenatis.
 					</p>
 				</aside>
-				{/* <MarqueeContainer /> */}
+				<MarqueeContainer />
 			</section>
 
 			<section>
