@@ -27,7 +27,7 @@ export const Button = ({
 		<button
 			onClick={onClick}
 			type={type}
-			className={`button mobile-full-width ${setButtonStyle} ${setButtonSize}`}>
+			className={`button ${setButtonStyle} ${setButtonSize}`}>
 			<a href={to}>
 				<span>
 					{text}

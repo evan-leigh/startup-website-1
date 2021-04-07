@@ -16,9 +16,9 @@ function Index() {
 	return (
 		<Main>
 			<section id='home'>
-				<aside style={{flexBasis: '440px'}}>
+				<aside style={{flexBasis: '560px'}}>
 					<h1 style={{maxWidth: '8em'}}>Dedicated to raising the bar</h1>
-					<p className='body-medium'>
+					<p style={{maxWidth: '27em'}} className='body-medium'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
 						elit tincidunt id tempus ut nunc duis non sit.
 					</p>
@@ -36,41 +36,40 @@ function Index() {
 					<img src={CoverImage1} alt=''></img>
 				</picture>
 			</section>
-			<div className='divider'>
-				<div className='divider-container'>
-					<Divider className='divider-bar' />
-					<ArrowDown className='scroll-arrow' />
-				</div>
-			</div>
 			<section className='about-section'>
+				<div className='divider'>
+					<div className='divider-container'>
+						<Divider className='divider-bar' />
+						<ArrowDown className='scroll-arrow' />
+					</div>
+				</div>
 				<picture>
 					<source type='image/webp' srcset={CoverImage1Webp} />
 					<source type='image/png' srcset={CoverImage1} />
 					<img src={CoverImage1} alt='' />
 				</picture>
-				<aside style={{flexBasis: '27em'}}>
+				<aside style={{flexBasis: '28em'}}>
 					<h2 style={{maxWidth: '8em'}}>Build a brand for your business.</h2>
-					<p>
+					<p className='body-small'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
 						aliquet magna leo semper turpis vivamus augue ac dui. Amet
 						ullamcorper blandit montes, nibh gravida mattis aenean habitant
 						massa. Quam.
 					</p>
-					<p>
+					<p className='body-small'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nunc
 						nibh id placerat ut adipiscing. Vulputate egestas sapien varius nibh
 						a lacinia sit vel augue.
 					</p>
-					{/* <div className='links'>
+					<div className='links'>
 						<Button
+							to='#'
 							text='Get Started'
 							buttonSize='medium'
 							buttonStyle='primary'
 						/>
-						<Link to='#'>
-							<span>Get Started</span>
-						</Link>
-					</div> */}
+						<Button to='#' text='More Info' buttonSize='medium' />
+					</div>
 				</aside>
 			</section>
 			<section className='testemonials'>
@@ -79,14 +78,14 @@ function Index() {
 				</aside>
 				<aside>
 					<h3>Heres what they're saying...</h3>
-					<p>
+					<p className='body-small'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Pellentesque aliquam non mattis est, mauris sit risus pellentesque
 						amet. Morbi dictum ut eleifend aliquam. At proin augue interdum
 						porta venenatis.
 					</p>
 				</aside>
-				<MarqueeContainer />
+				{/* <MarqueeContainer /> */}
 			</section>
 
 			<section>
@@ -95,21 +94,21 @@ function Index() {
 					<blockquote>
 						<ul className='block-quote'>
 							<li>
-								<p>
+								<p className='body-small'>
 									<strong>Fast and affordable</strong> dolor sit amet,
 									consectetur adipiscing elit, sed do eiusmod tempor. dolor sit
 									amet, conse dolor
 								</p>
 							</li>
 							<li>
-								<p>
+								<p className='body-small'>
 									<strong>24-Hour Support</strong> dolor sit amet, consectetur
 									adipiscing elit, sed do eiusmod tempor. dolor sit amet, conse
 									dolor
 								</p>
 							</li>
 							<li>
-								<p>
+								<p className='body-small'>
 									<strong>User Focus</strong> dolor sit amet, consectetur
 									adipiscing elit, sed do eiusmod tempor. dolor sit amet, conse
 									dolor
@@ -128,7 +127,7 @@ function Index() {
 				<div className='banner-cta'>
 					<aside>
 						<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</h3>
-						<p>
+						<p style={{maxWidth: '25em'}} className='body-small'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lobortis
 							interdum cum non
 						</p>

@@ -4,7 +4,7 @@ import {Logo, Menu} from '../assets/index'
 
 const NavItem = (props) => (
 	<NavLink
-		className='label-large'
+		className='label-medium'
 		activeClassName='nav-link-active'
 		to={`/${props.link}`}>
 		<span>{props.link}</span>
@@ -14,7 +14,7 @@ const NavItem = (props) => (
 
 const Header = () => (
 	<header>
-		<Link to=''>
+		<Link className='label-large' to=''>
 			<Logo />
 			<span>Context</span>
 		</Link>

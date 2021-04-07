@@ -17,13 +17,13 @@ $size: (
 
 // Initial Font Sizes
 
-$header-large: 42px;
+$header-large: 48px;
 $header-medium: 38px;
 $header-small: 28px;
 
 $body-large: 20px;
 $body-medium: 17px;
-$body-small: 14px;
+$body-small: 16px;
 
 $label-large: 16px;
 $label-medium: 15px;
@@ -47,27 +47,27 @@ $font: (
 	// Letter Spacings
 	kerning-heading: em(0.15px),
 	kerning-body-large: em(0.16px),
-	kerning-body-medium: em(-0.08px),
+	kerning-body-medium: em(0.08px),
 	kerning-label: em(1.5px),
 	// Scales font size depending on viewport size
 	// Headings
 	header-large:
 		clamp(
-			min($header-large * $min),
+			min($header-large * ($min * 0.8)),
 			initial($header-large),
-			max($header-large * $max)
+			max($header-large * ($max * 1.8))
 		),
 	header-medium:
 		clamp(
 			min($header-medium * $min),
 			initial($header-medium),
-			max($header-medium * $max)
+			max($header-medium * ($max * 0.4))
 		),
 	header-small:
 		clamp(
 			min($header-small * $min),
 			initial($header-small),
-			max($header-small * $max)
+			max($header-small * ($max * 0.8))
 		),
 	// Body Texts
 	body-large:
@@ -80,13 +80,13 @@ $font: (
 		clamp(
 			min($body-medium * $min),
 			initial($body-medium),
-			max($body-medium * ($max * 0.8))
+			max($body-medium * ($max * 0.71))
 		),
 	body-small:
 		clamp(
 			min($body-small * $min),
 			initial($body-small),
-			max($body-small * $max)
+			max($body-small * ($max * 0.69))
 		),
 	// Labels
 	label-large:

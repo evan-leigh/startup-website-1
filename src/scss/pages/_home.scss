@@ -16,8 +16,8 @@ picture {
 #home {
 	background: hsl(0, 0%, 98%);
 	picture {
-		height: 100%;
 		position: relative;
+		margin-bottom: -20px;
 	}
 	padding-top: 120px;
 	margin-top: -120px;
@@ -25,11 +25,12 @@ picture {
 }
 
 section {
+	// position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 40px 4vw;
-	gap: 5em;
+	gap: 2em;
 	flex-wrap: wrap;
 	aside {
 		width: fit-content;
@@ -50,31 +51,17 @@ section {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		min-width: 300px;
-		gap: 4vw;
-		.button {
-			flex-grow: 1;
-			width: 150px;
-		}
-		a {
-			display: flex;
-			align-items: center;
-			height: 55px;
-			width: 120px;
-			flex-grow: 1;
-			span {
-				height: fit-content;
-				flex-grow: 1;
-				text-align: center;
-			}
-		}
+		gap: 2vh;
 	}
 }
 
 .about-section {
-	aside {
-		@media (max-width: 927px) {
+	@media (max-width: 811px) {
+		aside {
 			order: -1;
+		}
+		.divider {
+			order: -2;
 		}
 	}
 }
@@ -83,22 +70,22 @@ section {
 	background: _palette(primary);
 	width: 100vw;
 	margin: 0 -4vw;
-	padding: 0 4vw;
+	padding: 4rem 8vw;
 	overflow: hidden;
 	aside {
 		margin: 4vh auto;
 		text-align: center;
-		padding: 0 0.5em;
-		max-width: 28em;
+		max-width: 38em;
 		h3 {
 			color: _palette(background);
 		}
 		p {
+			margin: 0 auto;
 			color: _palette(background);
 		}
 	}
 	.button {
 		display: block;
-		margin: 2rem auto;
+		margin: 0 auto;
 	}
 }
